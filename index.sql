@@ -22,3 +22,25 @@ CREATE TABLE Orders (
 Alter TABLE Product ADD  Category VARCHAR2(20); 
 
 Alter TABLE Orders ADD  OrderDate DATE SYSDATE;
+
+
+\\Product
+INSERT INTO Product (Product_id, Product_name, Category, Price)
+VALUES ('P01', 'Samsung Galaxy S20', 'Smartphone', 3299);
+INSERT INTO Product (Product_id, Product_name, Price)
+VALUES ('P02', 'ASUS Notebook', 'PC', 4599);
+
+
+\\Customer
+INSERT INTO customer (customer_id, customer_name, customer_tel)
+VALUES ('C01', 'ALI', 71321009);
+INSERT INTO customer (customer_id, customer_name, Price)
+VALUES ('C02', 'ASMA', 77345823);
+
+
+
+\\Orders
+INSERT INTO customer (customer_id, product_id, OrderDate, quantity, total_amount)
+VALUES ('C01', 'P02', NULL, 2, 9198);
+INSERT INTO customer (customer_id, product_id, OrderDate, quantity, total_amount)
+VALUES ('C02', 'P01', 28/05/2020, 1, 3299);
